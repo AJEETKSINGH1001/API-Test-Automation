@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="TestReqresAPIPost-20240524171100" tests="9" file=".py" time="8.992" timestamp="2024-05-24T17:11:09" failures="3" errors="0" skipped="0">
+		<testcase classname="TestReqresAPIPost" name="test_duplicate_user_creation" time="5.277" timestamp="2024-05-24T17:11:06" file="userpost.py" line="61">
+			<!--Test the API's response to creating a user with the same details more than once.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_long_strings_in_payload" time="0.581" timestamp="2024-05-24T17:11:06" file="userpost.py" line="73">
+			<!--Test the API's response to very long strings in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_post_response_json_structure" time="0.519" timestamp="2024-05-24T17:11:07" file="userpost.py" line="21">
+			<!--Test that the response JSON has the expected structure for a POST request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_post_with_additional_unspecified_fields" time="0.488" timestamp="2024-05-24T17:11:07" file="userpost.py" line="94">
+			<!--Test the API's behavior with additional unspecified fields in the payload.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_successful_post" time="0.519" timestamp="2024-05-24T17:11:09" file="userpost.py" line="9">
+			<!--Test that the API returns a successful response for a valid POST request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_timeout_scenario" time="0.048" timestamp="2024-05-24T17:11:09" file="userpost.py" line="48">
+			<!--Test the API's behavior under a timeout scenario.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_post_with_empty_payload" time="0.490" timestamp="2024-05-24T17:11:08" file="userpost.py" line="35">
+			<!--Test the API's behavior with an empty payload.-->
+			<failure type="AssertionError" message="201 != 400 : Expected status code 400 for empty payload"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Ajeet\PycharmProjects\API_Tests\postapis\userpost.py", line 38, in test_post_with_empty_payload
+    self.assertEqual(response.status_code, 400, "Expected status code 400 for empty payload")
+AssertionError: 201 != 400 : Expected status code 400 for empty payload
+]]></failure>
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_post_with_invalid_payload" time="0.503" timestamp="2024-05-24T17:11:08" file="userpost.py" line="40">
+			<!--Test the API's behavior with an invalid payload.-->
+			<failure type="AssertionError" message="201 != 400 : Expected status code 400 for invalid payload"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Ajeet\PycharmProjects\API_Tests\postapis\userpost.py", line 46, in test_post_with_invalid_payload
+    self.assertEqual(response.status_code, 400, "Expected status code 400 for invalid payload")
+AssertionError: 201 != 400 : Expected status code 400 for invalid payload
+]]></failure>
+		</testcase>
+		<testcase classname="TestReqresAPIPost" name="test_post_with_missing_required_fields" time="0.566" timestamp="2024-05-24T17:11:09" file="userpost.py" line="86">
+			<!--Test the API's behavior when required fields are missing from the payload.-->
+			<failure type="AssertionError" message="201 != 400 : Expected status code 400 for missing required fields"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Ajeet\PycharmProjects\API_Tests\postapis\userpost.py", line 92, in test_post_with_missing_required_fields
+    self.assertEqual(response.status_code, 400, "Expected status code 400 for missing required fields")
+AssertionError: 201 != 400 : Expected status code 400 for missing required fields
+]]></failure>
+		</testcase>
+	</testsuite>
+</testsuites>

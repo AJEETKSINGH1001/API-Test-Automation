@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="TestReqresAPI-20240524152132" tests="6" file=".py" time="1.046" timestamp="2024-05-24T15:21:33" failures="0" errors="0" skipped="0">
+		<testcase classname="TestReqresAPI" name="test_data_integrity" time="0.281" timestamp="2024-05-24T15:21:32" file="TestReqresAPI.py" line="25">
+			<!--Test that the data field in the response has the expected structure.-->
+		</testcase>
+		<testcase classname="TestReqresAPI" name="test_empty_response" time="0.189" timestamp="2024-05-24T15:21:32" file="TestReqresAPI.py" line="44">
+			<!--Test that the API returns an empty data list for a non-existent page.-->
+		</testcase>
+		<testcase classname="TestReqresAPI" name="test_invalid_page_parameter" time="0.188" timestamp="2024-05-24T15:21:33" file="TestReqresAPI.py" line="38">
+			<!--Test the API's behavior with an invalid page parameter.-->
+		</testcase>
+		<testcase classname="TestReqresAPI" name="test_response_json_structure" time="0.159" timestamp="2024-05-24T15:21:33" file="TestReqresAPI.py" line="15">
+			<!--Test that the response JSON has the expected structure.-->
+		</testcase>
+		<testcase classname="TestReqresAPI" name="test_successful_response" time="0.155" timestamp="2024-05-24T15:21:33" file="TestReqresAPI.py" line="10">
+			<!--Test that the API returns a successful response.-->
+		</testcase>
+		<testcase classname="TestReqresAPI" name="test_timeout_scenario" time="0.074" timestamp="2024-05-24T15:21:33" file="TestReqresAPI.py" line="51">
+			<!--Test the API's behavior under a timeout scenario.-->
+		</testcase>
+	</testsuite>
+</testsuites>

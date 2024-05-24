@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>results.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : results.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>TestReqresAPIPost
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7f481d5b-a2c0-4456-8b52-aee6be1a168d">test_duplicate_user_creation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#57b9a281-4cfd-4e43-9704-e807e30d73ba">test_long_strings_in_payload</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#337c9124-9a12-4afa-a5f1-2213d00560a3">test_post_response_json_structure</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a411de69-107d-4d4a-b9f0-c978df846feb">test_post_with_additional_unspecified_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#58a8d1c2-a07e-4373-8236-ee6182d739c4">test_successful_post</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8c2f36d4-2670-49ba-b0bf-f0ef80d6a1f4">test_timeout_scenario</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#5fa17322-0857-43f9-bfad-78e9867c5552">test_post_with_empty_payload</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#ba8e4841-bf87-4d33-a91a-358b66eb81ce">test_post_with_invalid_payload</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#863e8b6f-59a8-41ab-9f17-4d7ea521522b">test_post_with_missing_required_fields</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#5fa17322-0857-43f9-bfad-78e9867c5552">[F] TestReqresAPIPost : test_post_with_empty_payload</a></li>
+                    
+                    
+                    
+                    <li><a href="#ba8e4841-bf87-4d33-a91a-358b66eb81ce">[F] TestReqresAPIPost : test_post_with_invalid_payload</a></li>
+                    
+                    
+                    
+                    <li><a href="#863e8b6f-59a8-41ab-9f17-4d7ea521522b">[F] TestReqresAPIPost : test_post_with_missing_required_fields</a></li>
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: TestReqresAPIPost-20240524171100</h2>
+        <a id="d31da93f-fa98-4273-92c4-aa3ecf2375aa"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>8.992 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>9</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>3</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>TestReqresAPIPost</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7f481d5b-a2c0-4456-8b52-aee6be1a168d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_duplicate_user_creation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>5.277 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="57b9a281-4cfd-4e43-9704-e807e30d73ba"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_long_strings_in_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.581 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="337c9124-9a12-4afa-a5f1-2213d00560a3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_post_response_json_structure</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.519 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a411de69-107d-4d4a-b9f0-c978df846feb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_post_with_additional_unspecified_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.488 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="58a8d1c2-a07e-4373-8236-ee6182d739c4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_successful_post</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.519 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8c2f36d4-2670-49ba-b0bf-f0ef80d6a1f4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_timeout_scenario</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.048 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="5fa17322-0857-43f9-bfad-78e9867c5552"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_post_with_empty_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.49 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>201 != 400 : Expected status code 400 for empty payload</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Traceback (most recent call last):
+  File &#34;C:\Users\Ajeet\PycharmProjects\API_Tests\postapis\userpost.py&#34;, line 38, in test_post_with_empty_payload
+    self.assertEqual(response.status_code, 400, &#34;Expected status code 400 for empty payload&#34;)
+AssertionError: 201 != 400 : Expected status code 400 for empty payload
+</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="ba8e4841-bf87-4d33-a91a-358b66eb81ce"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_post_with_invalid_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.503 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>201 != 400 : Expected status code 400 for invalid payload</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Traceback (most recent call last):
+  File &#34;C:\Users\Ajeet\PycharmProjects\API_Tests\postapis\userpost.py&#34;, line 46, in test_post_with_invalid_payload
+    self.assertEqual(response.status_code, 400, &#34;Expected status code 400 for invalid payload&#34;)
+AssertionError: 201 != 400 : Expected status code 400 for invalid payload
+</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="863e8b6f-59a8-41ab-9f17-4d7ea521522b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_post_with_missing_required_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.566 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>201 != 400 : Expected status code 400 for missing required fields</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Traceback (most recent call last):
+  File &#34;C:\Users\Ajeet\PycharmProjects\API_Tests\postapis\userpost.py&#34;, line 92, in test_post_with_missing_required_fields
+    self.assertEqual(response.status_code, 400, &#34;Expected status code 400 for missing required fields&#34;)
+AssertionError: 201 != 400 : Expected status code 400 for missing required fields
+</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
