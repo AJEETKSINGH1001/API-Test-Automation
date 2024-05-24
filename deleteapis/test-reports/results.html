@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>results.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : results.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>TestReqresAPIDelete
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#4071e659-6423-489f-b96c-ee9fe6b2b3b6">test_delete_non_existent_user</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1a84814b-f938-4d7a-adf8-7d9ef5a629f0">test_delete_with_authentication</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a7fb6544-38c8-4bb2-a6e6-734f0efd056d">test_delete_with_body</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#52d2c3b2-8ba4-4d11-92d4-710bbdad2772">test_delete_with_headers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#6dd41816-fccf-4ca3-9395-6fb718404a1f">test_delete_with_invalid_authentication</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a5ab5220-c194-455f-8e70-76fb0358b92e">test_delete_with_query_parameters</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#ced4f3a2-1383-44db-8dfd-94321e6a64eb">test_successful_delete</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#058c4e24-b4a2-448b-9393-d6deec96099e">test_timeout_scenario</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#55405fda-0f22-4fbe-86f0-889d081b438e">test_delete_with_invalid_endpoint</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#7079879b-6881-4b3e-84c2-37cc8025cb30">test_delete_with_invalid_method</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#55405fda-0f22-4fbe-86f0-889d081b438e">[F] TestReqresAPIDelete : test_delete_with_invalid_endpoint</a></li>
+                    
+                    
+                    
+                    <li><a href="#7079879b-6881-4b3e-84c2-37cc8025cb30">[F] TestReqresAPIDelete : test_delete_with_invalid_method</a></li>
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: TestReqresAPIDelete-20240524200037</h2>
+        <a id="bedc0221-fae7-4b70-983e-9387c0db78c2"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>4.893 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>10</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>2</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>TestReqresAPIDelete</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4071e659-6423-489f-b96c-ee9fe6b2b3b6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_non_existent_user</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.725 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1a84814b-f938-4d7a-adf8-7d9ef5a629f0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_authentication</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.532 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a7fb6544-38c8-4bb2-a6e6-734f0efd056d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_body</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.518 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="52d2c3b2-8ba4-4d11-92d4-710bbdad2772"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_headers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.488 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6dd41816-fccf-4ca3-9395-6fb718404a1f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_invalid_authentication</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.534 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a5ab5220-c194-455f-8e70-76fb0358b92e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_query_parameters</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.505 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ced4f3a2-1383-44db-8dfd-94321e6a64eb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_successful_delete</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.521 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="058c4e24-b4a2-448b-9393-d6deec96099e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_timeout_scenario</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.062 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="55405fda-0f22-4fbe-86f0-889d081b438e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_invalid_endpoint</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.503 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>204 != 404 : Expected status code 404 for invalid endpoint</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Traceback (most recent call last):
+  File &#34;C:\Users\Ajeet\PycharmProjects\API_Tests\deleteapis\userdelete.py&#34;, line 22, in test_delete_with_invalid_endpoint
+    self.assertEqual(response.status_code, 404, &#34;Expected status code 404 for invalid endpoint&#34;)
+AssertionError: 204 != 404 : Expected status code 404 for invalid endpoint
+</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="7079879b-6881-4b3e-84c2-37cc8025cb30"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_delete_with_invalid_method</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.504 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>201 != 405 : Expected status code 405 for invalid HTTP method</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Traceback (most recent call last):
+  File &#34;C:\Users\Ajeet\PycharmProjects\API_Tests\deleteapis\userdelete.py&#34;, line 27, in test_delete_with_invalid_method
+    self.assertEqual(response.status_code, 405, &#34;Expected status code 405 for invalid HTTP method&#34;)
+AssertionError: 201 != 405 : Expected status code 405 for invalid HTTP method
+</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="TestReqresAPIDelete-20240524200037" tests="10" file=".py" time="4.893" timestamp="2024-05-24T20:00:42" failures="2" errors="0" skipped="0">
+		<testcase classname="TestReqresAPIDelete" name="test_delete_non_existent_user" time="0.725" timestamp="2024-05-24T20:00:38" file="userdelete.py" line="14">
+			<!--Test the API's response when attempting to delete a non-existent user.-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_authentication" time="0.532" timestamp="2024-05-24T20:00:38" file="userdelete.py" line="59">
+			<!--Test the API's response when adding authentication (though not required).-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_body" time="0.518" timestamp="2024-05-24T20:00:39" file="userdelete.py" line="51">
+			<!--Test the API's response when adding a body to the DELETE request (though unusual).-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_headers" time="0.488" timestamp="2024-05-24T20:00:39" file="userdelete.py" line="43">
+			<!--Test the API's response when adding custom headers to the DELETE request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_invalid_authentication" time="0.534" timestamp="2024-05-24T20:00:40" file="userdelete.py" line="65">
+			<!--Test the API's response with invalid authentication details.-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_query_parameters" time="0.505" timestamp="2024-05-24T20:00:41" file="userdelete.py" line="38">
+			<!--Test the API's response when adding query parameters to the DELETE request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_successful_delete" time="0.521" timestamp="2024-05-24T20:00:42" file="userdelete.py" line="9">
+			<!--Test that the API returns a successful response for a valid DELETE request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_timeout_scenario" time="0.062" timestamp="2024-05-24T20:00:42" file="userdelete.py" line="29">
+			<!--Test the API's behavior under a timeout scenario.-->
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_invalid_endpoint" time="0.503" timestamp="2024-05-24T20:00:40" file="userdelete.py" line="19">
+			<!--Test the API's response when using an invalid endpoint.-->
+			<failure type="AssertionError" message="204 != 404 : Expected status code 404 for invalid endpoint"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Ajeet\PycharmProjects\API_Tests\deleteapis\userdelete.py", line 22, in test_delete_with_invalid_endpoint
+    self.assertEqual(response.status_code, 404, "Expected status code 404 for invalid endpoint")
+AssertionError: 204 != 404 : Expected status code 404 for invalid endpoint
+]]></failure>
+		</testcase>
+		<testcase classname="TestReqresAPIDelete" name="test_delete_with_invalid_method" time="0.504" timestamp="2024-05-24T20:00:41" file="userdelete.py" line="24">
+			<!--Test the API's response when using an invalid HTTP method.-->
+			<failure type="AssertionError" message="201 != 405 : Expected status code 405 for invalid HTTP method"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Ajeet\PycharmProjects\API_Tests\deleteapis\userdelete.py", line 27, in test_delete_with_invalid_method
+    self.assertEqual(response.status_code, 405, "Expected status code 405 for invalid HTTP method")
+AssertionError: 201 != 405 : Expected status code 405 for invalid HTTP method
+]]></failure>
+		</testcase>
+	</testsuite>
+</testsuites>

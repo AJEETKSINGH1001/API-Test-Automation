@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>results.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : results.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>TestReqresAPIPut
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c0c2d5b8-fad2-4b4d-a1d2-c0d9086ad3b1">test_array_in_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#9487cf02-c3e6-4666-acbe-bdef662324a1">test_boolean_values_in_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e72f3975-7947-4578-9c01-4beaca8cba6d">test_large_payload</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#66cd7cbd-14bd-4aa5-9072-fdf50fd5385d">test_long_strings_in_payload</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#01e9ce83-56bb-4824-962d-9fb8ea5f88e3">test_null_values_in_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b48ab059-72d5-4ae5-9051-6e57424828cf">test_numeric_values_in_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fd7343b4-d339-4386-a010-a733d96c033c">test_object_in_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#c6d5cac7-8b36-46ae-a0a9-7ad78d8c3545">test_put_response_json_structure</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#9d840f4e-4ac6-4524-bff9-fc14efd27178">test_put_with_empty_payload</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2663e43e-5b9d-4abb-ab78-46b96820d86c">test_put_with_invalid_payload</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#630fcafc-5893-485f-aa12-8096830d1464">test_put_with_missing_required_fields</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3fb2a529-300d-46d0-adcb-991145ab54e3">test_special_characters_in_payload</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2d7f3966-d141-4095-bd6b-2e41df9d801c">test_successful_put</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#f39d974f-df9c-4b86-aa40-03d9f31670e5">test_timeout_scenario</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#d6b56447-582c-466f-9af1-670ab3370fe9">test_put_with_additional_unspecified_fields</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#d6b56447-582c-466f-9af1-670ab3370fe9">[F] TestReqresAPIPut : test_put_with_additional_unspecified_fields</a></li>
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: TestReqresAPIPut-20240524194502</h2>
+        <a id="008f1596-eb7d-4659-aaaf-9fd4812841cf"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>7.296 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>15</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>1</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>TestReqresAPIPut</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c0c2d5b8-fad2-4b4d-a1d2-c0d9086ad3b1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_array_in_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.596 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9487cf02-c3e6-4666-acbe-bdef662324a1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_boolean_values_in_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.612 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e72f3975-7947-4578-9c01-4beaca8cba6d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_large_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.817 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="66cd7cbd-14bd-4aa5-9072-fdf50fd5385d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_long_strings_in_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.488 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="01e9ce83-56bb-4824-962d-9fb8ea5f88e3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_null_values_in_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.471 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b48ab059-72d5-4ae5-9051-6e57424828cf"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_numeric_values_in_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.424 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fd7343b4-d339-4386-a010-a733d96c033c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_object_in_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.503 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c6d5cac7-8b36-46ae-a0a9-7ad78d8c3545"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_put_response_json_structure</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.456 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9d840f4e-4ac6-4524-bff9-fc14efd27178"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_put_with_empty_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.472 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2663e43e-5b9d-4abb-ab78-46b96820d86c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_put_with_invalid_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.498 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="630fcafc-5893-485f-aa12-8096830d1464"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_put_with_missing_required_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.477 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3fb2a529-300d-46d0-adcb-991145ab54e3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_special_characters_in_payload</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.472 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2d7f3966-d141-4095-bd6b-2e41df9d801c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_successful_put</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.473 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f39d974f-df9c-4b86-aa40-03d9f31670e5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_timeout_scenario</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="d6b56447-582c-466f-9af1-670ab3370fe9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_put_with_additional_unspecified_fields</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.491 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>&#39;extra_field&#39; unexpectedly found in {&#39;name&#39;: &#39;additional&#39;, &#39;job&#39;: &#39;fields&#39;, &#39;extra_field&#39;: &#39;extra_value&#39;, &#39;updatedAt&#39;: &#39;2024-05-24T14:15:08.629Z&#39;} : Response JSON should not contain &#39;extra_field&#39;</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Traceback (most recent call last):
+  File &#34;C:\Users\Ajeet\PycharmProjects\API_Tests\putapis\userput.py&#34;, line 96, in test_put_with_additional_unspecified_fields
+    self.assertNotIn(&#34;extra_field&#34;, json_data, &#34;Response JSON should not contain &#39;extra_field&#39;&#34;)
+AssertionError: &#39;extra_field&#39; unexpectedly found in {&#39;name&#39;: &#39;additional&#39;, &#39;job&#39;: &#39;fields&#39;, &#39;extra_field&#39;: &#39;extra_value&#39;, &#39;updatedAt&#39;: &#39;2024-05-24T14:15:08.629Z&#39;} : Response JSON should not contain &#39;extra_field&#39;
+</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>

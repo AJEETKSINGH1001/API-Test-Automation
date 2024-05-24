@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="TestReqresAPIPut-20240524194502" tests="15" file=".py" time="7.296" timestamp="2024-05-24T19:45:10" failures="1" errors="0" skipped="0">
+		<testcase classname="TestReqresAPIPut" name="test_array_in_fields" time="0.596" timestamp="2024-05-24T19:45:03" file="userput.py" line="152">
+			<!--Test the API's response when array values are provided in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_boolean_values_in_fields" time="0.612" timestamp="2024-05-24T19:45:04" file="userput.py" line="141">
+			<!--Test the API's response when boolean values are provided in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_large_payload" time="0.817" timestamp="2024-05-24T19:45:04" file="userput.py" line="99">
+			<!--Test the API's behavior with a very large payload size.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_long_strings_in_payload" time="0.488" timestamp="2024-05-24T19:45:05" file="userput.py" line="64">
+			<!--Test the API's response to very long strings in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_null_values_in_fields" time="0.471" timestamp="2024-05-24T19:45:05" file="userput.py" line="130">
+			<!--Test the API's response when null values are provided in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_numeric_values_in_fields" time="0.424" timestamp="2024-05-24T19:45:06" file="userput.py" line="119">
+			<!--Test the API's response when numeric values are provided in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_object_in_fields" time="0.503" timestamp="2024-05-24T19:45:06" file="userput.py" line="163">
+			<!--Test the API's response when object values are provided in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_put_response_json_structure" time="0.456" timestamp="2024-05-24T19:45:07" file="userput.py" line="20">
+			<!--Test that the response JSON has the expected structure for a PUT request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_put_with_empty_payload" time="0.472" timestamp="2024-05-24T19:45:08" file="userput.py" line="34">
+			<!--Test the API's behavior with an empty payload.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_put_with_invalid_payload" time="0.498" timestamp="2024-05-24T19:45:08" file="userput.py" line="41">
+			<!--Test the API's behavior with an invalid payload.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_put_with_missing_required_fields" time="0.477" timestamp="2024-05-24T19:45:09" file="userput.py" line="76">
+			<!--Test the API's behavior when required fields are missing from the payload.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_special_characters_in_payload" time="0.472" timestamp="2024-05-24T19:45:09" file="userput.py" line="108">
+			<!--Test the API's handling of special characters in the name and job fields.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_successful_put" time="0.473" timestamp="2024-05-24T19:45:10" file="userput.py" line="9">
+			<!--Test that the API returns a successful response for a valid PUT request.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_timeout_scenario" time="0.047" timestamp="2024-05-24T19:45:10" file="userput.py" line="51">
+			<!--Test the API's behavior under a timeout scenario.-->
+		</testcase>
+		<testcase classname="TestReqresAPIPut" name="test_put_with_additional_unspecified_fields" time="0.491" timestamp="2024-05-24T19:45:07" file="userput.py" line="86">
+			<!--Test the API's behavior with additional unspecified fields in the payload.-->
+			<failure type="AssertionError" message="'extra_field' unexpectedly found in {'name': 'additional', 'job': 'fields', 'extra_field': 'extra_value', 'updatedAt': '2024-05-24T14:15:08.629Z'} : Response JSON should not contain 'extra_field'"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Ajeet\PycharmProjects\API_Tests\putapis\userput.py", line 96, in test_put_with_additional_unspecified_fields
+    self.assertNotIn("extra_field", json_data, "Response JSON should not contain 'extra_field'")
+AssertionError: 'extra_field' unexpectedly found in {'name': 'additional', 'job': 'fields', 'extra_field': 'extra_value', 'updatedAt': '2024-05-24T14:15:08.629Z'} : Response JSON should not contain 'extra_field'
+]]></failure>
+		</testcase>
+	</testsuite>
+</testsuites>
